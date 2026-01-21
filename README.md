@@ -90,7 +90,7 @@ In this context, an R² of ~0.47 is **reasonable for a real-world salary predict
 ---
 
 ## 6. Project structure
-
+The project includes these main artifacts (not necessarily in that order):
 ```
 .
 ├── Data/
@@ -131,9 +131,23 @@ pip install -r requirements.txt
 ```bash
 python model/train.py
 ```
-
 This will generate the trained model artifact.
 
+### 4. Testing locally with test.py
+In addition to calling the API manually, you can test the model locally using the provided test.py script. This script sends a POST request to the /predict endpoint with a sample worker profile.
+
+Steps:
+
+1. Start the API locally:
+
+   ```bash
+   python predict.py
+   ```
+2. In another terminal, run:
+
+   ```bash
+   python test.py
+   ```
 ---
 
 ## 8. Containerization with Docker
